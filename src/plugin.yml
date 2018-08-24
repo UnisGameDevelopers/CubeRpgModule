@@ -1,0 +1,6 @@
+name: CubeRpg
+version: 1.0
+main: com.cube.rpg.CubeRpgPlugin
+
+commands:
+  spm:
