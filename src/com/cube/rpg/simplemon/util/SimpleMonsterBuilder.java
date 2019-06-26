@@ -84,7 +84,7 @@ public class SimpleMonsterBuilder {
     public SimpleMonster<EntityType> build(boolean isPermanent) {
         if(isPermanent) {
             SimpleMonsterDataManager.getManager().addMonsterInstance(this.monster);
-            monster.save(SimpleMonsterDataManager.getManager().getDataManager());
+            monster.save(SimpleMonsterDataManager.getManager().getMonsterDataManager());
         }
         return monster;
     }

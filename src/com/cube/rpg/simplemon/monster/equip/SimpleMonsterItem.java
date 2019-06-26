@@ -2,8 +2,8 @@ package com.cube.rpg.simplemon.monster.equip;
 
 import com.cube.rpg.impl.IYamlSaveableClass;
 import com.cube.rpg.simplemon.monster.SimpleMonsterDataManager;
-import com.cube.rpg.util.DataManager;
 import com.cube.rpg.util.MonsterItemSerialize;
+import com.ndy.util.DataManager;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ public class SimpleMonsterItem implements IYamlSaveableClass {
     }
 
     public SimpleMonsterItem(String name) {
-        DataManager dataManager = SimpleMonsterDataManager.getManager().getDataManager();
+        DataManager dataManager = SimpleMonsterDataManager.getManager().getMonsterDataManager();
         this.dropItems = MonsterItemSerialize.deserializes(dataManager.getStringList(name + ".dropItem"));
     }
 

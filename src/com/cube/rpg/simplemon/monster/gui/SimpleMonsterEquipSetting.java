@@ -1,13 +1,13 @@
 package com.cube.rpg.simplemon.monster.gui;
 
-import com.cube.rpg.pagegui.PageGUI;
 import com.cube.rpg.simplemon.util.SimpleMonsterBuilder;
-import com.cube.rpg.util.GuiManager;
-import com.cube.rpg.util.ItemBuilder;
+import com.ndy.util.GuiManager;
+import com.ndy.util.ItemBuilder;
+import com.ndy.util.gui.PageGUI;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
-public class SimpleMonsterEquipSetting extends PageGUI{
+public class SimpleMonsterEquipSetting extends PageGUI {
 
     private SimpleMonsterBuilder builder;
     private int slot = -1;
@@ -46,7 +46,7 @@ public class SimpleMonsterEquipSetting extends PageGUI{
 
     @Override
     public void updateGUI() {
-        GuiManager guiManager = new GuiManager(super.inventory);
+        GuiManager guiManager = new GuiManager(inventory);
         guiManager.setLoopItem(0, new ItemBuilder(34).setDisplayName(" ").build());
         //10 12 14 16 40
 

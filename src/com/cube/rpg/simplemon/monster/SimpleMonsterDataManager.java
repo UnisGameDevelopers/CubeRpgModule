@@ -2,7 +2,8 @@ package com.cube.rpg.simplemon.monster;
 
 import com.cube.rpg.simplemon.monster.equip.SimpleMonsterEquip;
 import com.cube.rpg.simplemon.monster.equip.SimpleMonsterItem;
-import com.cube.rpg.util.DataManager;
+import com.ndy.module.PluginModuleManager;
+import com.ndy.util.DataManager;
 import org.bukkit.entity.EntityType;
 
 import java.util.HashSet;
@@ -12,8 +13,10 @@ public class SimpleMonsterDataManager {
 
     private static SimpleMonsterDataManager instance;
 
-    private DataManager monsterDataManager = new DataManager("monster.yml");
-    private DataManager spawnerDataManager = new DataManager("spawners.yml");
+    private DataManager monsterDataManager = new DataManager("monster.yml",
+            PluginModuleManager.getManager().getModule("CubeRPG"));
+    private DataManager spawnerDataManager = new DataManager("spawners.yml",
+            PluginModuleManager.getManager().getModule("CubeRPG"));
     private Set<SimpleMonster<?>> monsters = new HashSet<>();
     private Set<SimpleSpawner> spawners = new HashSet<>();
 
@@ -44,6 +47,7 @@ public class SimpleMonsterDataManager {
 
     public void addMonsterInstance(SimpleMonster monster) {
         this.monsters.add(monster);
+        monster.save(getMonsterDataManager());
     }
 
     public DataManager getMonsterDataManager() { return monsterDataManager; }

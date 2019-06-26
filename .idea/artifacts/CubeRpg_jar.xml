@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CubeRpg:jar">
+    <output-path>$USER_HOME$/Desktop/Developement/Java/Minecraft/1.5.2/plugins</output-path>
+    <root id="archive" name="CubeRpg.jar">
+      <element id="module-output" name="CubeRpg" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/plugin.yml" />
+    </root>
+  </artifact>
+</component>

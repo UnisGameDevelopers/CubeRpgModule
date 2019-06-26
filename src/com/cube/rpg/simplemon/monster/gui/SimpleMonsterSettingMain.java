@@ -1,8 +1,8 @@
 package com.cube.rpg.simplemon.monster.gui;
 
-import com.cube.rpg.pagegui.PageGUI;
 import com.cube.rpg.simplemon.util.SimpleMonsterBuilder;
-import com.cube.rpg.util.ItemBuilder;
+import com.ndy.util.ItemBuilder;
+import com.ndy.util.gui.PageGUI;
 import org.bukkit.Material;
 
 public class SimpleMonsterSettingMain extends PageGUI {

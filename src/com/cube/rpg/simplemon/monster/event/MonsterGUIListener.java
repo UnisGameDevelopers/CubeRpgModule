@@ -1,11 +1,11 @@
 package com.cube.rpg.simplemon.monster.event;
 
-import com.cube.rpg.pagegui.GUISession;
 import com.cube.rpg.simplemon.monster.gui.SimpleMonsterDropSetting;
 import com.cube.rpg.simplemon.monster.gui.SimpleMonsterEquipSetting;
 import com.cube.rpg.simplemon.monster.gui.SimpleMonsterSettingMain;
 import com.cube.rpg.simplemon.monster.gui.SimpleMonsterTypeSetting;
 import com.cube.rpg.simplemon.util.SimpleMonsterBuilder;
+import com.ndy.util.gui.GUISession;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;

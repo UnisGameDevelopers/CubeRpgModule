@@ -2,8 +2,8 @@ package com.cube.rpg.simplemon.monster.equip;
 
 import com.cube.rpg.impl.IYamlSaveableClass;
 import com.cube.rpg.simplemon.monster.SimpleMonsterDataManager;
-import com.cube.rpg.util.DataManager;
-import com.cube.rpg.util.ItemSerialize;
+import com.ndy.util.DataManager;
+import com.ndy.util.ItemSerialize;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
@@ -16,7 +16,7 @@ public class SimpleMonsterEquip implements IYamlSaveableClass {
     }
     
     public SimpleMonsterEquip(String name) {
-        DataManager dataManager = SimpleMonsterDataManager.getManager().getDataManager();
+        DataManager dataManager = SimpleMonsterDataManager.getManager().getMonsterDataManager();
         this.head = new ItemSerialize(dataManager.getString(name + ".equipment.head")).deserialize();
         this.chestplate = new ItemSerialize(dataManager.getString(name + ".equipment.chestplate")).deserialize();
         this.leggings = new ItemSerialize(dataManager.getString(name + ".equipment.leggings")).deserialize();
@@ -45,8 +45,10 @@ public class SimpleMonsterEquip implements IYamlSaveableClass {
     public void setHand(ItemStack hand) { this.hand = hand; }
     public void setLeggings(ItemStack leggings) { this.leggings = leggings; }
 
+    public ItemStack[] getArmourContents() { return new ItemStack[] { this.getHead(), this.getChestplate(), this.getLeggings(), this.getBoots() }; }
+
     @Override
-    public void save(DataManager dataManager, Object... objects) { 
+    public void save(DataManager dataManager, Object... objects) {
         String name = (String) objects[0];
         dataManager.set(name + ".equipment.head", new ItemSerialize(getHead()).serialize());
         dataManager.set(name + ".equipment.chestplate", new ItemSerialize(getChestplate()).serialize());

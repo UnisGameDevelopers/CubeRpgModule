@@ -1,9 +1,9 @@
 package com.cube.rpg.simplemon.monster.gui;
 
-import com.cube.rpg.pagegui.PageGUI;
 import com.cube.rpg.simplemon.monster.equip.SimpleMonsterItem;
 import com.cube.rpg.simplemon.util.SimpleMonsterBuilder;
-import com.cube.rpg.util.ItemBuilder;
+import com.ndy.util.ItemBuilder;
+import com.ndy.util.gui.PageGUI;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
